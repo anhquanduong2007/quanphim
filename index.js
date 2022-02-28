@@ -5,8 +5,10 @@ const router = jsonServer.router('db.json');
 const middlewares = jsonServer.defaults();
 var cors = require('cors')
 // Set default middlewares (logger, static, cors and no-cache)
+
 server.use(middlewares);
-app.use(cors())
+server.use(cors())
+
 
 // Add custom routes before JSON Server router
 server.get('/echo', (req, res) => {
