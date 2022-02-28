@@ -60,7 +60,6 @@ router.render = (req, res) => {
 server.use('/api', router);
 
 // Start server
-const PORT = process.env.PORT || 3000;
-server.listen(PORT, () => {
-  console.log('JSON Server is running');
+app.listen(process.env.PORT || 3000, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, server.settings.env);
 });
